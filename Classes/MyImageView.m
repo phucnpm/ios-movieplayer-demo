@@ -57,6 +57,7 @@
 @implementation MyImageView
 
 @synthesize viewController;
+@synthesize raceController;
 @synthesize startSecond;
 
 - (instancetype)initWithImage:(UIImage *)image startSecond:(float)second
@@ -68,11 +69,20 @@
 /* Touches to the Image view will start the movie playing. */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"TSET");
     UITouch* touch = [touches anyObject];
     if (touch.phase == UITouchPhaseBegan)
     {
 		/* play the movie! */
         [self.viewController playMovieAt:[self.startSecond floatValue]];
+        if([self.startSecond floatValue] < 1.0) {
+            [self.raceController raceAt:0];
+        } else if ([self.startSecond floatValue] < 7.0) {
+            [self.raceController raceAt:1];
+        } else if ([self.startSecond floatValue] < 13) {
+            [self.raceController raceAt:2];
+        }
+       
     }    
 }
 

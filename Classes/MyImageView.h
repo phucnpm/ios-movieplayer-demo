@@ -53,6 +53,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyLocalMovieViewController.h"
+#import "RaceTrackViewController.h"
 
 @interface MyImageView : UIImageView 
 {
@@ -61,6 +62,7 @@
 
 @property NSNumber *startSecond;
 @property (nonatomic,strong) IBOutlet MyLocalMovieViewController *viewController;
+@property (nonatomic,strong) RaceTrackViewController *raceController;
 
 - (instancetype)initWithImage:(UIImage *)image startSecond:(float)second;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;

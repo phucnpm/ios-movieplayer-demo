@@ -60,13 +60,6 @@
                                     <outlet property="viewController" destination="8" id="DuE-46-GHx"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" image="preview.jpg" id="bbX-5i-8R6" customClass="MyImageView">
-                                <rect key="frame" x="218" y="175" width="102" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="viewController" destination="8" id="rYI-6C-9lj"/>
-                                </connections>
-                            </imageView>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" image="preview.jpg" id="Iyl-2f-vgB" customClass="MyImageView">
                                 <rect key="frame" x="218" y="117" width="102" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,7 +77,6 @@
                         <outlet property="backgroundView" destination="124" id="125"/>
                         <outlet property="imageView0" destination="3DN-no-MQg" id="SbD-fO-sbd"/>
                         <outlet property="imageView10" destination="Iyl-2f-vgB" id="VnE-je-gmi"/>
-                        <outlet property="imageView15" destination="bbX-5i-8R6" id="Ei0-dV-F5Z"/>
                         <outlet property="imageView5" destination="CyE-9D-ry9" id="eAG-I2-wr0"/>
                         <outlet property="movieBackgroundImageView" destination="106" id="107"/>
                         <outlet property="overlayController" destination="112" id="117"/>

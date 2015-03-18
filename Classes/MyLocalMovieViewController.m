@@ -52,6 +52,7 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 
 #import "MyLocalMovieViewController.h"
 #import "MyImageView.h"
+#import "RaceTrackViewController.h"
 
 @interface MyLocalMovieViewController (LocalMovieURL)
 -(NSURL *)localMovieURL;
@@ -90,21 +91,31 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self createAndConfigurePlayerWithURL:[self localMovieURL]  sourceType:MPMovieSourceTypeFile];
+    
+    RaceTrackViewController* vc = [[RaceTrackViewController alloc] initWithNibName:nil bundle:nil];
+    CGRect viewFrame = [self.view bounds];
+    vc.view.frame = CGRectMake(0, 0, viewFrame.size.width/2.0, viewFrame.size.height/2.0);
+//    [self.view addSubview:vc.view];
 
-    self.imageView5.image = [[self moviePlayerController] thumbnailImageAtTime:5.0
+    self.imageView5.image = [[self moviePlayerController] thumbnailImageAtTime:6.3
                                                    timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView5.startSecond = [NSNumber numberWithFloat:5.0];
+    self.imageView5.startSecond = [NSNumber numberWithFloat:6.3];
+    self.imageView5.raceController = vc;
     
-    self.imageView10.image = [[self moviePlayerController] thumbnailImageAtTime:10.0
+    self.imageView10.image = [[self moviePlayerController] thumbnailImageAtTime:12.6
                                                                     timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView10.startSecond = [NSNumber numberWithFloat:10.0];
+    self.imageView10.startSecond = [NSNumber numberWithFloat:12.6];
+    self.imageView10.raceController = vc;
     
-    self.imageView15.image = [[self moviePlayerController] thumbnailImageAtTime:15.0
+    self.imageView15.image = [[self moviePlayerController] thumbnailImageAtTime:18.0
                                                                     timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView15.startSecond = [NSNumber numberWithFloat:15.0];
+    self.imageView15.startSecond = [NSNumber numberWithFloat:18.0];
+    self.imageView15.raceController = vc;
     
     [[self moviePlayerController] pause];
+
 }
 
 /* Button presses for the 'Play Movie' button. */

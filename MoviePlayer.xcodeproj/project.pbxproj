@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1888448B1AB9E22700B72122 /* RaceTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888448A1AB9E22700B72122 /* RaceTrackViewController.m */; };
+		1888448E1AB9E26F00B72122 /* carmodel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888448C1AB9E26F00B72122 /* carmodel@2x.png */; };
+		1888448F1AB9E26F00B72122 /* carmodel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888448D1AB9E26F00B72122 /* carmodel.png */; };
 		1D3623260D0F684500981E51 /* MoviePlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MoviePlayerAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -43,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188844891AB9E22700B72122 /* RaceTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceTrackViewController.h; sourceTree = "<group>"; };
+		1888448A1AB9E22700B72122 /* RaceTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceTrackViewController.m; sourceTree = "<group>"; };
+		1888448C1AB9E26F00B72122 /* carmodel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carmodel@2x.png"; sourceTree = "<group>"; };
+		1888448D1AB9E26F00B72122 /* carmodel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carmodel.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* MoviePlayerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* MoviePlayerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerAppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +122,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		188844881AB9E20D00B72122 /* RaceTrack */ = {
+			isa = PBXGroup;
+			children = (
+				188844891AB9E22700B72122 /* RaceTrackViewController.h */,
+				1888448A1AB9E22700B72122 /* RaceTrackViewController.m */,
+			);
+			name = RaceTrack;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +157,7 @@
 			children = (
 				849C87AE0F897A7D005A6DDE /* MyMovieViewController.h */,
 				849C87AF0F897A7D005A6DDE /* MyMovieViewController.m */,
+				188844881AB9E20D00B72122 /* RaceTrack */,
 				AFAF2850130E15E80023B78D /* Local Movie View */,
 				AFAF284D130E15D90023B78D /* Streaming Movie View */,
 				AFAF28D7130E491F0023B78D /* Overlay View */,
@@ -152,6 +169,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1888448C1AB9E26F00B72122 /* carmodel@2x.png */,
+				1888448D1AB9E26F00B72122 /* carmodel.png */,
 				524FFA5E18E242C500494FA6 /* Default-568h@2x.png */,
 				AF5D8388136D28E100A24F8A /* images */,
 				AF796CCF136CF60D0013E770 /* MainWindow-iPad.xib */,
@@ -321,7 +340,9 @@
 				524FFA5F18E242C500494FA6 /* Default-568h@2x.png in Resources */,
 				AF5D8398136D28E100A24F8A /* Placeholder.png in Resources */,
 				AF475CE8136DD99100A47DB7 /* ReadMe.txt in Resources */,
+				1888448E1AB9E26F00B72122 /* carmodel@2x.png in Resources */,
 				AFCDA4A81371C5C20097BFDE /* local.png in Resources */,
+				1888448F1AB9E26F00B72122 /* carmodel.png in Resources */,
 				AFCDA4A91371C5C20097BFDE /* movieBackground.jpg in Resources */,
 				AFCDA4AA1371C5C20097BFDE /* preview.jpg in Resources */,
 				AFCDA4AB1371C5C20097BFDE /* streaming.png in Resources */,
@@ -337,6 +358,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MoviePlayerAppDelegate.m in Sources */,
+				1888448B1AB9E22700B72122 /* RaceTrackViewController.m in Sources */,
 				849C87B00F897A7D005A6DDE /* MyMovieViewController.m in Sources */,
 				849C88110F899862005A6DDE /* MyStreamingMovieViewController.m in Sources */,
 				53E4BB070DDB491E0033B3CF /* MyImageView.m in Sources */,

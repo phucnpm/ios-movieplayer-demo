@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
-        <deployment version="800" defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment version="800" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
@@ -24,7 +24,7 @@
                 <userLayoutGuide location="93" affinity="minY"/>
                 <userLayoutGuide location="240" affinity="minY"/>
                 <userLayoutGuide location="240" affinity="minY"/>
-                <userLayoutGuide location="87" affinity="minX"/>
+                <userLayoutGuide location="88" affinity="minX"/>
                 <userLayoutGuide location="160" affinity="minX"/>
                 <userLayoutGuide location="240" affinity="minY"/>
             </userGuides>
@@ -34,10 +34,7 @@
         <tabBarController id="8">
             <extendedEdge key="edgesForExtendedLayout"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-            <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <nil key="simulatedDestinationMetrics"/>
             <tabBar key="tabBar" contentMode="scaleToFill" id="9">
                 <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -47,11 +44,6 @@
                 <viewController nibName="SecondView-iPad" id="10" customClass="MyStreamingMovieViewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Streaming" image="streaming.png" id="13"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="appDelegate" destination="2" id="66"/>
                         <outlet property="overlayController" destination="48" id="62"/>
@@ -63,43 +55,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="preview.jpg" id="29" customClass="MyImageView">
-                                <rect key="frame" x="218" y="214" width="335" height="198"/>
+                                <rect key="frame" x="639" y="20" width="129" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="viewController" destination="11" id="61"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="16">
-                                <rect key="frame" x="330" y="458" width="114" height="38"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="preview.jpg" id="NGy-ib-qY7" customClass="MyImageView">
+                                <rect key="frame" x="639" y="111" width="129" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666668650000005" alpha="0.5" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Play Movie">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
                                 <connections>
-                                    <action selector="playMovieButtonPressed:" destination="11" eventType="touchUpInside" id="26"/>
+                                    <outlet property="viewController" destination="11" id="YtD-6X-hxn"/>
                                 </connections>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="preview.jpg" id="Qcf-Ky-wsm" customClass="MyImageView">
+                                <rect key="frame" x="639" y="202" width="129" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="viewController" destination="11" id="FgA-pS-BIG"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Local" image="local.png" id="12"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <nil key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="appDelegate" destination="2" id="67"/>
                         <outlet property="backgroundView" destination="54" id="64"/>
+                        <outlet property="imageView0" destination="29" id="eZ9-vX-0Sh"/>
+                        <outlet property="imageView10" destination="Qcf-Ky-wsm" id="vLH-2l-wpj"/>
+                        <outlet property="imageView5" destination="NGy-ib-qY7" id="DKT-Jb-e38"/>
                         <outlet property="movieBackgroundImageView" destination="58" id="59"/>
                         <outlet property="overlayController" destination="48" id="65"/>
                     </connections>
                 </viewController>
             </viewControllers>
+            <point key="canvasLocation" x="283" y="1728"/>
         </tabBarController>
         <view clearsContextBeforeDrawing="NO" alpha="0.4577464759349823" contentMode="scaleToFill" id="42" userLabel="overlay view">
             <rect key="frame" x="0.0" y="0.0" width="123" height="57"/>
@@ -150,15 +142,13 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <viewController id="48" userLabel="My Overlay View Controller" customClass="MyOverlayViewController">
             <extendedEdge key="edgesForExtendedLayout"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <nil key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="movieLoadStateText" destination="43" id="51"/>
                 <outlet property="moviePlaybackStateText" destination="46" id="50"/>
@@ -169,6 +159,8 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="movieBackground.jpg" id="58">
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
@@ -181,4 +173,9 @@
         <image name="preview.jpg" width="480" height="270"/>
         <image name="streaming.png" width="32" height="32"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

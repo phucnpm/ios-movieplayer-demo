@@ -106,7 +106,6 @@
 	car.contents = (id)([UIImage imageNamed:@"carmodel.png"].CGImage);
 	[self.view.layer addSublayer:car];
 	
-	
 }
 
 - (void)raceAt:(NSInteger)point
@@ -123,7 +122,7 @@
         }
         case 1: {
             CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-            anim.path = self.trackPath.CGPath;
+            anim.path = self.trackPath1.CGPath;
             anim.rotationMode = kCAAnimationRotateAuto;
             //	anim.repeatCount = HUGE_VALF;
             anim.duration = MOVIE_DURATION - POINT_DURATION;
@@ -132,7 +131,7 @@
         }
         case 2: {
             CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-            anim.path = self.trackPath.CGPath;
+            anim.path = self.trackPath2.CGPath;
             anim.rotationMode = kCAAnimationRotateAuto;
             //	anim.repeatCount = HUGE_VALF;
             anim.duration = MOVIE_DURATION - POINT_DURATION*2;

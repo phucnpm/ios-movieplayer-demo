@@ -83,9 +83,9 @@
                     <connections>
                         <outlet property="appDelegate" destination="2" id="67"/>
                         <outlet property="backgroundView" destination="54" id="64"/>
-                        <outlet property="imageView0" destination="29" id="eZ9-vX-0Sh"/>
-                        <outlet property="imageView10" destination="Qcf-Ky-wsm" id="vLH-2l-wpj"/>
-                        <outlet property="imageView5" destination="NGy-ib-qY7" id="DKT-Jb-e38"/>
+                        <outlet property="imageView0" destination="29" id="u1F-bR-ufb"/>
+                        <outlet property="imageView10" destination="Qcf-Ky-wsm" id="bwd-T5-UW0"/>
+                        <outlet property="imageView5" destination="NGy-ib-qY7" id="cHE-EC-PhA"/>
                         <outlet property="movieBackgroundImageView" destination="58" id="59"/>
                         <outlet property="overlayController" destination="48" id="65"/>
                     </connections>

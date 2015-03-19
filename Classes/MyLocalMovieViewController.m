@@ -97,8 +97,13 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
     RaceTrackViewController* vc = [[RaceTrackViewController alloc] initWithNibName:nil bundle:nil];
     CGRect viewFrame = [self.view bounds];
     vc.view.frame = CGRectMake(0, 0, viewFrame.size.width/2.0, viewFrame.size.height/2.0);
-//    [self.view addSubview:vc.view];
+    [self.view addSubview:vc.view];
 
+    self.imageView0.image = [[self moviePlayerController] thumbnailImageAtTime:0
+                                                                    timeOption:MPMovieTimeOptionNearestKeyFrame];
+    self.imageView0.startSecond = [NSNumber numberWithFloat:0];
+    self.imageView0.raceController = vc;
+    
     self.imageView5.image = [[self moviePlayerController] thumbnailImageAtTime:6.3
                                                    timeOption:MPMovieTimeOptionNearestKeyFrame];
     self.imageView5.startSecond = [NSNumber numberWithFloat:6.3];
@@ -108,14 +113,9 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
                                                                     timeOption:MPMovieTimeOptionNearestKeyFrame];
     self.imageView10.startSecond = [NSNumber numberWithFloat:12.6];
     self.imageView10.raceController = vc;
-    
-    self.imageView15.image = [[self moviePlayerController] thumbnailImageAtTime:18.0
-                                                                    timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView15.startSecond = [NSNumber numberWithFloat:18.0];
-    self.imageView15.raceController = vc;
+
     
     [[self moviePlayerController] pause];
-
 }
 
 /* Button presses for the 'Play Movie' button. */
@@ -139,6 +139,7 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 -(void)playMovie
 {
     [[self moviePlayerController] play];
+    [self moviePlayerController].se
 }
 
 

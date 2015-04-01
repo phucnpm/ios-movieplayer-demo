@@ -56,6 +56,7 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 
 @interface MyLocalMovieViewController : MyMovieViewController 
 {
+    float currentPlayback;
 }
 
 -(IBAction)playMovieButtonPressed:(id)sender;

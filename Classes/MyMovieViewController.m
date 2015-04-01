@@ -515,7 +515,8 @@ CGFloat kMovieViewOffsetY = 20.0;
     if (player) 
     {
         player.scalingMode = [MoviePlayerUserPrefs scalingModeUserSetting];
-        player.controlStyle =[MoviePlayerUserPrefs controlStyleUserSetting];	
+        player.controlStyle = MPMovieControlStyleNone;
+//        player.controlStyle = MPMovieControlStyleEmbedded;
         player.backgroundView.backgroundColor = [MoviePlayerUserPrefs backgroundColorUserSetting];
         player.repeatMode = [MoviePlayerUserPrefs repeatModeUserSetting];
         if ([MoviePlayerUserPrefs backgroundImageUserSetting] == YES)

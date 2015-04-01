@@ -82,6 +82,8 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 
 @property (nonatomic, strong) IBOutlet MoviePlayerAppDelegate *appDelegate;
 
+@property (nonatomic, strong) IBOutlet UILabel *currentTimeLbl;
+
 @property (strong) MPMoviePlayerController *moviePlayerController;
 
 - (IBAction)overlayViewCloseButtonPress:(id)sender;

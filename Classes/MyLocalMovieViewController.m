@@ -54,6 +54,8 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 #import "MyImageView.h"
 #import "RaceTrackViewController.h"
 
+#define DURATION 22
+
 @interface MyLocalMovieViewController (LocalMovieURL)
 -(NSURL *)localMovieURL;
 @end
@@ -96,7 +98,13 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
     
     RaceTrackViewController* vc = [[RaceTrackViewController alloc] initWithNibName:nil bundle:nil];
     CGRect viewFrame = [self.view bounds];
+
+    if(!IPAD) {
+        vc.view.layer.anchorPoint = CGPointMake(0, 0);
+        vc.view.layer.sublayerTransform = CATransform3DMakeScale(0.5, 0.5, 0.0);
+    }
     vc.view.frame = CGRectMake(0, 0, viewFrame.size.width/2.0, viewFrame.size.height/2.0);
+    
     [self.view addSubview:vc.view];
 
     self.imageView0.image = [[self moviePlayerController] thumbnailImageAtTime:0
@@ -104,18 +112,32 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
     self.imageView0.startSecond = [NSNumber numberWithFloat:0];
     self.imageView0.raceController = vc;
     
-    self.imageView5.image = [[self moviePlayerController] thumbnailImageAtTime:6.3
+    self.imageView5.image = [[self moviePlayerController] thumbnailImageAtTime:4
                                                    timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView5.startSecond = [NSNumber numberWithFloat:6.3];
+    self.imageView5.startSecond = [NSNumber numberWithFloat:4];
     self.imageView5.raceController = vc;
     
-    self.imageView10.image = [[self moviePlayerController] thumbnailImageAtTime:12.6
+    self.imageView10.image = [[self moviePlayerController] thumbnailImageAtTime:12
                                                                     timeOption:MPMovieTimeOptionNearestKeyFrame];
-    self.imageView10.startSecond = [NSNumber numberWithFloat:12.6];
+    self.imageView10.startSecond = [NSNumber numberWithFloat:12];
     self.imageView10.raceController = vc;
 
     
     [[self moviePlayerController] pause];
+    [self.view bringSubviewToFront:self.currentTimeLbl];
+}
+
+-(void)monitorPlaybackTime
+{
+    float time = [self moviePlayerController].currentPlaybackTime;
+    [self.currentTimeLbl setText:[NSString stringWithFormat:@"%.2f s", time]];
+//    NSLog(@"currenttime: %f", time);
+    
+    //keep checking for the end of video
+    if(time < DURATION){
+        [self performSelector:@selector(monitorPlaybackTime) withObject:nil afterDelay:0.1];
+    }
+    
 }
 
 /* Button presses for the 'Play Movie' button. */
@@ -133,13 +155,13 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
     [[self moviePlayerController] setCurrentPlaybackTime:second];
 //    [self playMovieFile:[self localMovieURL]];
     
-    [self performSelector:@selector(playMovie) withObject:NULL afterDelay:0.5];
+    [self performSelector:@selector(playMovie) withObject:NULL afterDelay:0.1];
+    [self monitorPlaybackTime];
 }
 
 -(void)playMovie
 {
     [[self moviePlayerController] play];
-    [self moviePlayerController].se
 }
 
 

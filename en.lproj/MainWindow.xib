@@ -23,6 +23,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="367" y="393"/>
         </window>
         <tabBarController id="56">
             <extendedEdge key="edgesForExtendedLayout"/>
@@ -33,14 +34,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController title="Streaming" nibName="SecondView" id="59" customClass="MyStreamingMovieViewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Streaming" image="streaming.png" id="60"/>
-                    <connections>
-                        <outlet property="appDelegate" destination="3" id="128"/>
-                        <outlet property="movieBackgroundImageView" destination="106" id="108"/>
-                    </connections>
-                </viewController>
                 <viewController id="8" customClass="MyLocalMovieViewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="11" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
@@ -67,6 +60,13 @@
                                     <outlet property="viewController" destination="8" id="qRT-oE-s9O"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aVO-WF-SWG">
+                                <rect key="frame" x="125" y="498" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="appDelegate" destination="3" id="127"/>
                         <outlet property="backgroundView" destination="124" id="125"/>
+                        <outlet property="currentTimeLbl" destination="aVO-WF-SWG" id="g54-Mj-Dc4"/>
                         <outlet property="imageView0" destination="3DN-no-MQg" id="SbD-fO-sbd"/>
                         <outlet property="imageView10" destination="Iyl-2f-vgB" id="VnE-je-gmi"/>
                         <outlet property="imageView5" destination="CyE-9D-ry9" id="eAG-I2-wr0"/>
@@ -83,8 +84,9 @@
                     </connections>
                 </viewController>
             </viewControllers>
+            <point key="canvasLocation" x="741" y="437"/>
         </tabBarController>
-        <view clearsContextBeforeDrawing="NO" alpha="0.4577464759349823" contentMode="scaleToFill" id="40" userLabel="overlay view">
+        <view hidden="YES" clearsContextBeforeDrawing="NO" alpha="0.4577464759349823" contentMode="scaleToFill" id="40" userLabel="overlay view">
             <rect key="frame" x="0.0" y="0.0" width="123" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -160,7 +162,6 @@
         <image name="local.png" width="23" height="24"/>
         <image name="movieBackground.jpg" width="478" height="640"/>
         <image name="preview.jpg" width="480" height="270"/>
-        <image name="streaming.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

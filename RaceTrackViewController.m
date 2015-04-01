@@ -11,8 +11,7 @@
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
 #define P(x,y) CGPointMake(x, y)
-#define MOVIE_DURATION 21.0
-#define POINT_DURATION 3.0
+#define MOVIE_DURATION 22.5
 
 
 @implementation RaceTrackViewController
@@ -108,15 +107,16 @@
 	
 }
 
-- (void)raceAt:(NSInteger)point
+- (void)raceAt:(float)timePoint withPath:(int)index
 {
-    switch (point) {
+    NSLog(@"%f %d", timePoint, index);
+    switch (index) {
         case 0: {
             CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
             anim.path = self.trackPath.CGPath;
             anim.rotationMode = kCAAnimationRotateAuto;
             //	anim.repeatCount = HUGE_VALF;
-            anim.duration = MOVIE_DURATION;
+            anim.duration = MOVIE_DURATION - timePoint;
             [self.car addAnimation:anim forKey:@"race"];
             break;
         }
@@ -125,7 +125,7 @@
             anim.path = self.trackPath1.CGPath;
             anim.rotationMode = kCAAnimationRotateAuto;
             //	anim.repeatCount = HUGE_VALF;
-            anim.duration = MOVIE_DURATION - POINT_DURATION;
+            anim.duration = MOVIE_DURATION - timePoint;
             [self.car addAnimation:anim forKey:@"race"];
             break;
         }
@@ -134,7 +134,8 @@
             anim.path = self.trackPath2.CGPath;
             anim.rotationMode = kCAAnimationRotateAuto;
             //	anim.repeatCount = HUGE_VALF;
-            anim.duration = MOVIE_DURATION - POINT_DURATION*2;
+            anim.duration = MOVIE_DURATION - timePoint;
+
             [self.car addAnimation:anim forKey:@"race"];
             break;
         }

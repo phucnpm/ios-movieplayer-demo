@@ -79,15 +79,16 @@
     UITouch* touch = [touches anyObject];
     if (touch.phase == UITouchPhaseBegan)
     {
+        float timePoint = [self.startSecond floatValue];
 		/* play the movie! */
-        [self.viewController playMovieAt:[self.startSecond floatValue]];
+        [self.viewController playMovieAt:timePoint];
         
-        if([self.startSecond floatValue] < 1.0) {
-            [self.raceController raceAt:0];
-        } else if ([self.startSecond floatValue] < 7.0) {
-            [self.raceController raceAt:1];
-        } else if ([self.startSecond floatValue] < 13) {
-            [self.raceController raceAt:2];
+        if(timePoint < 1.0) {
+            [self.raceController raceAt:timePoint withPath:0];
+        } else if (timePoint < 5.0) {
+            [self.raceController raceAt:timePoint withPath:1];
+        } else if (timePoint < 13.0) {
+            [self.raceController raceAt:timePoint withPath:2];
         }
        
     }    

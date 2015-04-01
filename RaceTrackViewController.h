@@ -18,6 +18,6 @@
 @property (strong) UIBezierPath *trackPath1;
 @property (strong) UIBezierPath *trackPath2;
 
-- (void)raceAt:(NSInteger)point;
+- (void)raceAt:(float)timePoint withPath:(int)index;
 
 @end

@@ -41,14 +41,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController nibName="SecondView-iPad" id="10" customClass="MyStreamingMovieViewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Streaming" image="streaming.png" id="13"/>
-                    <connections>
-                        <outlet property="appDelegate" destination="2" id="66"/>
-                        <outlet property="overlayController" destination="48" id="62"/>
-                    </connections>
-                </viewController>
                 <viewController id="11" customClass="MyLocalMovieViewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="14">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
@@ -75,6 +67,13 @@
                                     <outlet property="viewController" destination="11" id="FgA-pS-BIG"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmS-SA-Te9">
+                                <rect key="frame" x="344" y="954" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -83,6 +82,7 @@
                     <connections>
                         <outlet property="appDelegate" destination="2" id="67"/>
                         <outlet property="backgroundView" destination="54" id="64"/>
+                        <outlet property="currentTimeLbl" destination="cmS-SA-Te9" id="xeh-ZV-jix"/>
                         <outlet property="imageView0" destination="29" id="u1F-bR-ufb"/>
                         <outlet property="imageView10" destination="Qcf-Ky-wsm" id="bwd-T5-UW0"/>
                         <outlet property="imageView5" destination="NGy-ib-qY7" id="cHE-EC-PhA"/>
@@ -93,7 +93,7 @@
             </viewControllers>
             <point key="canvasLocation" x="283" y="1728"/>
         </tabBarController>
-        <view clearsContextBeforeDrawing="NO" alpha="0.4577464759349823" contentMode="scaleToFill" id="42" userLabel="overlay view">
+        <view hidden="YES" clearsContextBeforeDrawing="NO" alpha="0.4577464759349823" contentMode="scaleToFill" id="42" userLabel="overlay view">
             <rect key="frame" x="0.0" y="0.0" width="123" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -171,7 +171,6 @@
         <image name="local.png" width="23" height="24"/>
         <image name="movieBackground.jpg" width="478" height="640"/>
         <image name="preview.jpg" width="480" height="270"/>
-        <image name="streaming.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

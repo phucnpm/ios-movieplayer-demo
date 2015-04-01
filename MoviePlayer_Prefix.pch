@@ -51,4 +51,7 @@ Copyright (C) 2014 Apple Inc. All Rights Reserved.
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+#define IPAD     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
 #endif
